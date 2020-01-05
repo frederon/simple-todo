@@ -48,7 +48,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: solid 1px goldenrod;
+  border-bottom: solid 2px #c0c0c0;
 }
 
 form {
@@ -56,12 +56,13 @@ form {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top: solid 1px goldenrod;
+  border-top: solid 2px #c0c0c0;
   background-color: #f0f0f0;
 }
 
 article {
-  background-color: #e0e0e0;
+  font-family: "Gelasio", sans-serif;
+  background-color: #c0c0c0;
   padding: 15px 10px;
   display: flex;
   flex-direction: row;
@@ -73,12 +74,12 @@ article {
 
 .toDoList {
   font-family: "Anton", sans-serif;
-  color: goldenrod;
+  color: #018383;
 }
 
 i {
   font-size: 1.3rem;
-  color: goldenrod;
+  color: #018383;
 }
 
 .clear,
@@ -97,7 +98,7 @@ i {
   font-size: 1rem;
   font-weight: bold;
   font-family: "Righteous", cursive;
-  color: goldenrod;
+  color: #018383;
 }
 
 .container {
@@ -105,7 +106,8 @@ i {
   margin-left: auto;
   margin-right: auto;
   margin-top: 4vh;
-  background-color: whitesmoke;
+  background: #dcdcdc;
+  border: 1px solid #dcdcdc;
 }
 
 .toDoWriter {
@@ -118,7 +120,7 @@ i {
 
 .submit {
   font-size: 12px;
-  background-color: goldenrod;
+  background-color: #018383;
   font-weight: bold;
   text-shadow: 1px 1px black;
   color: #ffffff;
@@ -136,6 +138,7 @@ i {
 }
 
 .submit:hover {
-  background-color: navy;
-  color: goldenrod;
+  background-color: #f4f4f4;
+  text-shadow: none;
+  color: #018383;
 }
