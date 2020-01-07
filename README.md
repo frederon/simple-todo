@@ -1,5 +1,7 @@
 # Tugas Day 3 ARC
 
+![screenshot](./screenshot.jpg "Screenshot of the project")
+
 1. Technologi Stack
 
 - Express
@@ -15,14 +17,17 @@
 npm install
 ```
 
-> Run ESLint (optional)
-
-```
-eslint .
-```
-
 > Run server
 
 ```
 npm run start
+```
+
+The website lives in http://localhost:8000/ by default.
+If you plan to change the port or deploy for production, please edit config.js to match yours.
+
+> Run ESLint (optional)
+
+```
+eslint .
 ```
