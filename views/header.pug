@@ -1,0 +1,7 @@
+header
+  h1 To do list
+  span.date= today.formatted
+  form.todo-form(action="/tasks/add", method="post")
+    input(type="text", name="description" placeholder="Description")
+    input(type="date", name="date" value=today.raw)
+    input(type="submit" name="Submit" value="+")

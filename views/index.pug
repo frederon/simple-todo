@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  section.tasks-container
+    h1 Tasks 
+      span (#{tasks.filter(task => task.done).length}/#{tasks.length})
+    ul.tasks-list
+      if tasks.length > 0
+        each task in tasks
+          li
+            if task.done
+              span.task-description.strike= task.description
+            else
+              span.task-description= task.description
+            - let options = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric' };
+            - let date = new Date(task.date.substring(0,10)).toLocaleDateString("en-US", options);
+            span.task-date Due date: #{task.date.substring(0,10) === today.raw ? "Today" : date}
+            form.task-action(action="/tasks/remove", method="post")
+              input(type="text", name="id", value=task._id)
+              input(type="submit", name="remove", value="Remove")
+            label.task-checkbox-container
+              //- input(type="text", name="id", value=task._id)
+              if task.done
+                input.task-checkbox(type="checkbox", onclick=`updateTask(this, "${task._id}")`, checked)
+              else
+                input.task-checkbox(type="checkbox", onclick=`updateTask(this, "${task._id}")`)
+              span.checkmark
+      else
+        span No task available. Mind if you add some? :)
